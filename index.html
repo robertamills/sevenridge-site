@@ -120,7 +120,12 @@
   .contact p{max-width:34em;margin:22px 0 32px;font-size:19px}
   .contact .btn{background:var(--white);color:var(--navy)}
   .contact .btn:hover{background:var(--mist)}
-  .contact .alt{margin-top:22px;font-size:16px}
+  .reach{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+  .reach .email{color:var(--white);font-weight:700;font-variation-settings:"wdth" 112;font-size:clamp(20px,2.6vw,30px);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px;overflow-wrap:anywhere}
+  .reach .email:hover{color:var(--mist)}
+  .contact .copy{border:0;cursor:pointer;font-family:inherit}
+  .reach .copied{font-size:15px;color:#c9d5ee;flex-basis:100%;min-height:1.4em}
+  .contact .alt{margin-top:10px;font-size:16px}
   .contact .alt a{color:var(--white)}
   .contact .range{margin-top:64px;opacity:.9}
   .contact .range path{animation:none}
@@ -230,8 +235,12 @@
     <div class="wrap">
       <h2>Have a plant that isn't hitting plan?</h2>
       <p>Whether you're weighing an acquisition or need results from one you already own, start with a short conversation about what you're seeing.</p>
-      <a class="btn" href="mailto:info@sevenridgeconsulting.com?subject=Inquiry%20from%20sevenridgeconsulting.com">Email Bob</a>
-      <p class="alt">info@sevenridgeconsulting.com, or connect on <a href="https://www.linkedin.com/in/bob-mills-1902944/">LinkedIn</a></p>
+      <div class="reach">
+        <a class="email" href="mailto:info@sevenridgeconsulting.com?subject=Inquiry%20from%20sevenridgeconsulting.com">info@sevenridgeconsulting.com</a>
+        <button type="button" class="btn copy" id="copy-email" data-email="info@sevenridgeconsulting.com">Copy email</button>
+        <span class="copied" id="copy-status" role="status" aria-live="polite"></span>
+      </div>
+      <p class="alt">Or connect on <a href="https://www.linkedin.com/in/bob-mills-1902944/">LinkedIn</a>.</p>
       <svg class="range" viewBox="0 54 196 97" aria-hidden="true" style="max-width:360px">
         <path fill="#5f85cc" d="M32 151 70 58 108 151Z M92 151 130 58 168 151Z"/>
         <path fill="#3a68bd" d="M6 151 35 79 64 151Z M71 151 100 80 129 151Z M131 151 160 78 189 151Z"/>
@@ -243,10 +252,21 @@
 
 <footer>
   <div class="wrap">
-    <span>&copy; <span id="yr">2026</span> Seven Ridge Consulting</span>
+    <span>&copy; 2024 Seven Ridge Consulting</span>
     <span>Omaha, Nebraska</span>
   </div>
 </footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script>
+(function(){
+  var b=document.getElementById('copy-email'), s=document.getElementById('copy-status');
+  if(!b) return;
+  b.addEventListener('click', function(){
+    var e=b.getAttribute('data-email');
+    function done(){ b.textContent='Copied'; s.textContent='Email address copied to your clipboard.'; setTimeout(function(){ b.textContent='Copy email'; s.textContent=''; }, 2500); }
+    function fallback(){ var t=document.createElement('textarea'); t.value=e; t.setAttribute('readonly',''); t.style.position='absolute'; t.style.left='-9999px'; document.body.appendChild(t); t.select(); try{ document.execCommand('copy'); done(); }catch(x){ s.textContent='Copy this address: '+e; } document.body.removeChild(t); }
+    if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(e).then(done, fallback); } else { fallback(); }
+  });
+})();
+</script>
 </body>
 </html>
