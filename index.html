@@ -82,9 +82,10 @@
   @media (max-width:420px){.row{grid-template-columns:44px minmax(0,1fr);}.tile{width:44px;height:44px;font-size:22px}.row .val{grid-column:2;text-align:left}}
 
   section{padding-block:80px}
-  .sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:48px;align-items:end;margin-bottom:40px}
+  .sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:40px;align-items:end;align-items:last baseline;margin-bottom:36px}
   .sec-head h2{font-size:clamp(30px,3.4vw,42px);font-weight:700;line-height:1.08}
-  .sec-head p{color:var(--muted);max-width:52ch}
+  .sec-head p{color:var(--muted);max-width:60ch;font-size:18px}
+  .sec-head h2:only-child{grid-column:1/-1}
   @media (max-width:860px){.sec-head{grid-template-columns:1fr;gap:12px}}
 
   /* Results: chart panel + narrative */
@@ -280,7 +281,7 @@
   <section id="approach" class="flowsec band">
     <div class="inner">
       <div class="sec-head">
-        <h2>How an engagement runs</h2>
+        <h2>How we work</h2>
         <p>Every engagement ends with a stronger team running the plant, not a dependency on a consultant.</p>
       </div>
       <ol class="flow">
