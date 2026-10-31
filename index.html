@@ -3,250 +3,274 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Seven Ridge Consulting | Manufacturing turnarounds for PE-backed companies</title>
-<meta name="description" content="Seven Ridge Consulting turns around underperforming manufacturing plants for private equity owners: EBITDA from 5% to 20% in four months at a $60M flagship facility. Led by Bob Mills, 28 years in manufacturing operations. Omaha, Nebraska.">
+<meta name="description" content="Seven Ridge Consulting brings hands-on turnaround leadership to PE-backed manufacturers: EBITDA from 5% to 20% in four months at a $60M flagship plant. Led by Bob Mills, 28 years in manufacturing operations. Omaha, Nebraska.">
 <link rel="canonical" href="https://sevenridgeconsulting.com/">
 <meta property="og:title" content="Seven Ridge Consulting">
-<meta property="og:description" content="Manufacturing turnarounds for PE-backed companies. EBITDA from 5% to 20% in four months.">
+<meta property="og:description" content="Plants back on plan, and built to stay there. Turnaround leadership for PE-backed manufacturers.">
 <meta property="og:url" content="https://sevenridgeconsulting.com/">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
+<title>Seven Ridge Consulting | Manufacturing turnarounds for PE-backed companies</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,500;100,600;125,600;125,700;125,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+  /* Layout: the plant's own visual management board. The hero is an SQDC board (safety, quality,
+     delivery, cost), results read like before/after charts from an operating review, and the
+     engagement is drawn as a process flow. Condensed headings keep the type tight and upright. */
   :root{
     --navy:#16264a;
+    --navy-2:#1d3060;
     --peak:#335ba3;
     --ridge:#3a68bd;
     --sky:#5f85cc;
     --mist:#eef2fa;
-    --rule:#d5deef;
-    --text:#2a3550;
-    --muted:#5a6680;
-    --white:#ffffff;
-    --max:1180px;
-    --gutter:clamp(16px,4vw,40px);
+    --rule:#d5ddec;
+    --ink:#1f2b45;
+    --muted:#55627a;
+    --paper:#ffffff;
+    --head:"IBM Plex Sans Condensed", "Arial Narrow", "Segoe UI", sans-serif;
+    --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --page:1120px;
+    --measure:64ch;
+    color-scheme:light;
   }
-  *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;background:var(--white);color:var(--text);font-family:Archivo,system-ui,sans-serif;font-variation-settings:"wdth" 100;font-size:18px;line-height:1.6}
-  a{color:var(--peak)}
-  a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:2px}
-  .wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gutter)}
-  h1,h2,h3{color:var(--navy);margin:0;font-variation-settings:"wdth" 125;letter-spacing:-.015em;line-height:1.05}
-  p{margin:0 0 1em}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .band{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+  .inner{max-width:var(--page);margin:0 auto}
+  a{color:var(--peak);text-underline-offset:3px}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--sky);outline-offset:3px}
+  h1,h2,h3{font-family:var(--head);color:var(--navy);margin:0;text-wrap:balance;letter-spacing:0}
+  p{margin:0}
+  .num{font-variant-numeric:tabular-nums lining-nums}
 
-  /* Header */
-  .top{display:flex;align-items:center;justify-content:space-between;padding-block:22px}
-  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);font-weight:700;font-variation-settings:"wdth" 125;font-size:19px;letter-spacing:-.01em}
-  .brand svg{width:46px;height:auto}
-  .top nav{display:flex;gap:28px;align-items:center}
-  .top nav a{color:var(--text);text-decoration:none;font-size:16px;font-weight:500}
-  .top nav a:hover{color:var(--peak)}
-  .top nav a.contact-link{color:var(--white);background:var(--peak);padding:9px 18px;border-radius:3px}
-  .top nav a.contact-link:hover{background:var(--navy);color:var(--white)}
-  @media (max-width:820px){.top nav a:not(.contact-link){display:none}}
-  @media (max-width:420px){.brand span{font-size:16px}.brand svg{width:38px}}
+  /* Header + hero share the navy band */
+  .top{background:var(--navy);color:#cfd8ea}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:18px;border-bottom:1px solid #2b3f6c}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-family:var(--head);font-weight:600;font-size:20px}
+  .brand svg{width:42px;height:auto;flex:none}
+  .bar nav{display:flex;gap:24px;font-size:15px;font-weight:500}
+  .bar nav a{color:#cfd8ea;text-decoration:none}
+  .bar nav a:hover{color:#fff}
+  .bar nav a.cta{color:var(--navy);background:#fff;padding:7px 14px;border-radius:3px}
+  @media (max-width:780px){.bar nav a:not(.cta){display:none}}
 
-  /* Hero: the result is the headline, the peaks are the one bold visual */
-  .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,5vw,64px);align-items:end;padding-top:clamp(36px,7vw,88px)}
-  .hero .kicker{font-size:clamp(17px,1.6vw,20px);font-weight:600;color:var(--peak);margin:0 0 18px}
-  .hero h1{font-size:clamp(40px,6.2vw,80px);font-weight:800}
-  .hero h1 .arrow{color:var(--sky);font-weight:600}
-  .hero .lead{font-size:clamp(18px,1.7vw,21px);color:var(--muted);max-width:33em;margin:26px 0 32px}
-  .actions{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;padding-bottom:clamp(40px,6vw,72px)}
-  .btn{display:inline-block;background:var(--navy);color:var(--white);text-decoration:none;font-weight:600;padding:15px 26px;border-radius:3px;font-size:17px}
-  .btn:hover{background:var(--peak)}
-  .actions .plain{font-weight:600;font-size:17px}
-  .range{width:100%;height:auto;display:block}
-  .range path{transform-box:fill-box;transform-origin:50% 100%}
-  @media (prefers-reduced-motion:no-preference){
-    .hero .range path{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
-    .hero .range path:nth-child(1){animation-delay:.05s}.hero .range path:nth-child(2){animation-delay:.15s}
-    .hero .range path:nth-child(3){animation-delay:.3s}.hero .range path:nth-child(4){animation-delay:.4s}.hero .range path:nth-child(5){animation-delay:.5s}
-    .hero .range path:nth-child(6){animation-delay:.65s}.hero .range path:nth-child(7){animation-delay:.75s}
-    @keyframes rise{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-  }
-  .ground{height:14px;background:var(--navy)}
-  @media (max-width:860px){.hero{grid-template-columns:1fr}.actions{padding-bottom:8px}.hero .range{max-width:520px}}
+  .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center;padding-block:64px 72px}
+  .hero h1{color:#fff;font-weight:700;font-size:clamp(36px,4.6vw,56px);line-height:1.04}
+  .hero .lead{font-size:18px;color:#cfd8ea;max-width:44ch;margin-top:20px}
+  .hero .actions{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;margin-top:30px}
+  .btn{display:inline-block;font-family:var(--body);font-weight:600;font-size:15px;padding:13px 22px;border-radius:3px;border:0;cursor:pointer;text-decoration:none;background:var(--sky);color:#fff}
+  .btn:hover{background:var(--ridge)}
+  .hero .actions a.plain{color:#fff}
+  @media (max-width:900px){.hero{grid-template-columns:1fr;gap:40px}}
 
-  /* Proof strip */
-  .proof{background:var(--navy);color:#c9d5ee}
-  .proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;padding-block:34px 38px}
-  .proof strong{display:block;color:var(--white);font-variation-settings:"wdth" 125;font-size:clamp(26px,2.8vw,34px);font-weight:700;line-height:1.1;margin-bottom:6px}
-  .proof span{font-size:16px;line-height:1.45;display:block}
-  @media (max-width:900px){.proof .wrap{grid-template-columns:1fr 1fr}}
-  @media (max-width:480px){.proof .wrap{grid-template-columns:1fr;gap:20px}}
+  /* SQDC board */
+  .board{background:var(--paper);color:var(--ink);border-radius:4px;box-shadow:0 18px 40px rgba(6,14,34,.35);overflow:hidden}
+  .board-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 18px;background:var(--mist);border-bottom:1px solid var(--rule)}
+  .board-head b{font-family:var(--head);font-size:17px;color:var(--navy)}
+  .board-head span{font-size:13px;color:var(--muted)}
+  .row{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:16px;align-items:center;padding:14px 18px;border-bottom:1px solid var(--rule)}
+  .row:last-child{border-bottom:0}
+  .tile{width:52px;height:52px;display:grid;place-items:center;font-family:var(--head);font-weight:700;font-size:26px;color:#fff;border-radius:3px}
+  .t-s{background:var(--navy)} .t-q{background:var(--peak)} .t-d{background:var(--ridge)} .t-c{background:var(--sky)}
+  .row .what b{display:block;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.3}
+  .row .what span{font-size:13.5px;color:var(--muted)}
+  .row .val{font-family:var(--head);font-weight:700;font-size:22px;color:var(--peak);white-space:nowrap;text-align:right}
+  .row .val small{display:block;font-family:var(--body);font-weight:500;font-size:12.5px;color:var(--muted)}
+  @media (max-width:420px){.row{grid-template-columns:44px minmax(0,1fr);}.tile{width:44px;height:44px;font-size:22px}.row .val{grid-column:2;text-align:left}}
 
-  section{padding-block:clamp(64px,9vw,112px)}
-  .head{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(20px,5vw,72px);margin-bottom:48px;align-items:end}
-  .head h2{font-size:clamp(30px,4vw,48px);font-weight:700}
-  .head p{color:var(--muted);margin:0;max-width:36em}
-  @media (max-width:860px){.head{grid-template-columns:1fr}}
+  section{padding-block:80px}
+  .sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:48px;align-items:end;margin-bottom:40px}
+  .sec-head h2{font-size:clamp(30px,3.4vw,42px);font-weight:700;line-height:1.08}
+  .sec-head p{color:var(--muted);max-width:52ch}
+  @media (max-width:860px){.sec-head{grid-template-columns:1fr;gap:12px}}
 
-  /* Results: each story is a ruled row led by its number */
-  .results{background:var(--mist)}
-  .story{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.6fr);gap:clamp(20px,5vw,72px);padding-block:40px;border-top:2px solid var(--navy)}
-  .story:last-child{border-bottom:1px solid var(--rule)}
-  .story .figure{font-variation-settings:"wdth" 125;font-weight:800;color:var(--peak);font-size:clamp(46px,6vw,76px);line-height:1;letter-spacing:-.02em}
-  .story .figure small{display:block;font-size:17px;font-weight:600;letter-spacing:0;color:var(--navy);margin-top:12px;line-height:1.35;font-variation-settings:"wdth" 100}
-  .story .client{font-size:16px;font-weight:600;color:var(--muted);margin:0 0 8px}
-  .story h3{font-size:clamp(23px,2.3vw,30px);font-weight:700;margin-bottom:14px}
-  .story p{margin:0 0 14px}
-  .story ul{margin:0;padding-left:20px}
-  .story li{margin-bottom:6px}
+  /* Results: chart panel + narrative */
+  .result{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr);gap:48px;padding-block:36px;border-top:1px solid var(--rule)}
+  .result:first-of-type{border-top:2px solid var(--navy)}
+  @media (max-width:860px){.result{grid-template-columns:1fr;gap:24px}}
+  .chart{background:var(--mist);border-radius:4px;padding:20px 20px 16px}
+  .chart .metric{font-family:var(--head);font-weight:600;color:var(--navy);font-size:16px}
+  .chart .big{font-family:var(--head);font-weight:700;color:var(--peak);font-size:clamp(34px,3.6vw,44px);line-height:1.05;margin:4px 0 16px}
+  .bars{display:grid;gap:10px}
+  .b{display:grid;grid-template-columns:76px minmax(0,1fr) 56px;gap:10px;align-items:center;font-size:13.5px}
+  .b .lab{color:var(--muted)}
+  .b .track{height:18px;background:#dde4f2;border-radius:2px;overflow:hidden}
+  .b .fill{height:100%;background:var(--sky)}
+  .b.after .fill{background:var(--peak)}
+  .b .v{text-align:right;font-weight:600;color:var(--navy)}
+  .chart .scale{margin-top:10px;font-size:12.5px;color:var(--muted)}
+  .story .who{font-size:14px;color:var(--muted);margin-bottom:6px}
+  .story h3{font-size:clamp(23px,2.2vw,28px);font-weight:600;line-height:1.15;margin-bottom:12px}
+  .story p{max-width:var(--measure);margin-bottom:12px}
+  .story ul{margin:0;padding-left:1.1em;max-width:var(--measure)}
+  .story li{margin-bottom:7px}
   .story li::marker{color:var(--ridge)}
-  @media (max-width:860px){.story{grid-template-columns:1fr;gap:18px}}
 
-  /* Approach: a real sequence, so numbered */
-  .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,36px);counter-reset:step}
-  .steps li{counter-increment:step;border-top:4px solid var(--sky);padding-top:18px}
-  .steps li:nth-child(2){border-color:var(--ridge)}
-  .steps li:nth-child(3){border-color:var(--peak)}
-  .steps li:nth-child(4){border-color:var(--navy)}
-  .steps li::before{content:counter(step);display:block;font-variation-settings:"wdth" 125;font-weight:700;color:var(--peak);font-size:20px;margin-bottom:6px}
-  .steps h3{font-size:21px;font-weight:600;margin-bottom:10px}
-  .steps p{color:var(--muted);margin:0;font-size:17px}
-  @media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
-  @media (max-width:520px){.steps{grid-template-columns:1fr}}
+  /* Process flow */
+  .flowsec{background:var(--mist)}
+  .flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;counter-reset:f}
+  .flow li{counter-increment:f;position:relative;background:var(--paper);padding:22px 30px 24px 22px;clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%,18px 50%)}
+  .flow li:first-child{clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%)}
+  .flow li + li{padding-left:34px}
+  .flow li::before{content:"Step " counter(f);display:block;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ridge);margin-bottom:6px}
+  .flow h3{font-size:21px;font-weight:600;margin-bottom:6px}
+  .flow p{font-size:15px;color:var(--muted)}
+  @media (max-width:900px){
+    .flow{grid-template-columns:1fr;gap:4px}
+    .flow li,.flow li:first-child{clip-path:polygon(0 0,100% 0,100% calc(100% - 12px),50% 100%,0 calc(100% - 12px));padding:20px 20px 30px}
+    .flow li + li{padding-left:20px}
+  }
 
-  /* Services as a ruled list */
-  .services{border-top:2px solid var(--navy)}
-  .service{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(20px,5vw,72px);padding-block:26px;border-bottom:1px solid var(--rule)}
-  .service h3{font-size:clamp(21px,2vw,25px);font-weight:600}
-  .service p{color:var(--muted);margin:0}
-  @media (max-width:860px){.service{grid-template-columns:1fr;gap:8px}}
-  #services{padding-top:0}
+  /* Services */
+  .svc{border-top:2px solid var(--navy)}
+  .svc-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:40px;padding-block:18px;border-bottom:1px solid var(--rule)}
+  .svc-row h3{font-size:20px;font-weight:600}
+  .svc-row p{color:var(--muted);max-width:var(--measure)}
+  @media (max-width:700px){.svc-row{grid-template-columns:1fr;gap:4px}}
 
-  /* About + career timeline */
-  .about-sec{background:var(--mist)}
-  .about{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(28px,5vw,72px)}
-  .about h2{font-size:clamp(30px,4vw,48px);font-weight:700;margin-bottom:24px}
-  .about .bio p{color:var(--text)}
-  .about .bio .edu{margin-top:28px;padding-top:20px;border-top:1px solid var(--rule);font-size:16px;color:var(--muted)}
-  .timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--rule)}
-  .timeline li{position:relative;padding:0 0 26px 28px}
-  .timeline li:last-child{padding-bottom:0}
-  .timeline li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;background:var(--mist);border:2px solid var(--ridge);transform:rotate(45deg)}
-  .timeline li:first-child::before{background:var(--peak);border-color:var(--peak)}
-  .timeline .yrs{font-size:15px;font-weight:600;color:var(--peak)}
-  .timeline .org{display:block;font-weight:700;color:var(--navy);font-variation-settings:"wdth" 125;font-size:19px;line-height:1.3}
-  .timeline .roles{display:block;color:var(--muted);font-size:16px}
-  .timeline .note{display:block;color:var(--text);font-size:16px;margin-top:2px}
-  @media (max-width:860px){.about{grid-template-columns:1fr}}
+  /* About */
+  .about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:56px}
+  @media (max-width:860px){.about{grid-template-columns:1fr;gap:36px}}
+  .about h2{font-size:clamp(30px,3.4vw,42px);font-weight:700;margin-bottom:16px}
+  .about .bio p{margin-bottom:14px;max-width:var(--measure)}
+  .glance{background:var(--mist);border-radius:4px;padding:24px 26px 8px;align-self:start}
+  .glance h3{font-size:19px;font-weight:600;margin-bottom:8px}
+  .glance dl{margin:0}
+  .glance .item{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;padding-block:14px;border-top:1px solid var(--rule)}
+  .glance dt{font-family:var(--head);font-weight:600;color:var(--peak);font-size:16px}
+  .glance dd{margin:0;font-size:15.5px;color:var(--ink)}
+  .scale-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:2px 0 4px}
+  .scale-row div{background:var(--paper);border-radius:3px;padding:10px 12px}
+  .scale-row b{display:block;font-family:var(--head);font-weight:700;font-size:21px;color:var(--navy);line-height:1.15}
+  .scale-row span{font-size:13px;color:var(--muted);line-height:1.35;display:block}
+  @media (max-width:520px){.glance .item{grid-template-columns:1fr;gap:4px}.scale-row{grid-template-columns:1fr}}
 
   /* Contact */
-  .contact{background:var(--navy);color:#c9d5ee;padding-bottom:0}
-  .contact h2{color:var(--white);font-size:clamp(32px,4.6vw,56px);font-weight:800;max-width:14em}
-  .contact p{max-width:34em;margin:22px 0 32px;font-size:19px}
-  .reach{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
-  .reach .email{color:var(--white);font-weight:700;font-variation-settings:"wdth" 112;font-size:clamp(20px,2.6vw,30px);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px;overflow-wrap:anywhere}
-  .reach .email:hover{color:var(--mist)}
-  .contact .btn{background:var(--white);color:var(--navy)}
-  .contact .btn:hover{background:var(--mist)}
-  .contact .copy{border:0;cursor:pointer;font-family:inherit}
-  .reach .copied{font-size:15px;color:#c9d5ee;flex-basis:100%;min-height:1.4em}
-  .contact .alt{margin-top:10px;font-size:16px}
-  .contact .alt a{color:var(--white)}
-  .contact .range{margin-top:64px;opacity:.9;max-width:360px}
-  footer{background:var(--navy);color:#8e9cbc;font-size:15px;border-top:1px solid #2a3d66}
-  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding-block:20px 24px}
+  .contact{background:var(--navy);color:#cfd8ea}
+  .contact h2{color:#fff;font-size:clamp(30px,3.6vw,44px);font-weight:700;line-height:1.08;max-width:20ch}
+  .contact .sub{margin-top:14px;max-width:56ch}
+  .reach{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:28px}
+  .reach .email{font-family:var(--head);font-weight:600;font-size:clamp(21px,2.4vw,28px);color:#fff;overflow-wrap:anywhere;text-underline-offset:5px}
+  .status{flex-basis:100%;min-height:1.4em;font-size:14px}
+  .contact .alt{margin-top:4px;font-size:15px}
+  .contact .alt a{color:#fff}
+  footer{background:var(--navy);color:#8f9dbd;font-size:14px}
+  footer .inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding-block:20px 26px;border-top:1px solid #2b3f6c}
 </style>
 </head>
 <body>
+<div class="top">
+  <header class="band">
+    <div class="inner bar">
+      <a class="brand" href="#top" aria-label="Seven Ridge Consulting, top of page">
+        <svg viewBox="0 54 196 98" aria-hidden="true"><path fill="#5f85cc" d="M32 150 70 58 108 150Z M92 150 130 58 168 150Z"/><path fill="#3a68bd" d="M6 150 35 79 64 150Z M71 150 100 80 129 150Z M131 150 160 78 189 150Z"/><path fill="#335ba3" d="M48 150 70 97 92 150Z M108 150 130 97 152 150Z"/></svg>
+        Seven Ridge Consulting
+      </a>
+      <nav aria-label="Main">
+        <a href="#results">Results</a>
+        <a href="#approach">Approach</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a class="cta" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<header class="wrap top">
-  <a class="brand" href="#" aria-label="Seven Ridge Consulting, home">
-    <svg viewBox="0 54 196 98" aria-hidden="true"><path fill="#5f85cc" d="M32 150 70 58 108 150Z M92 150 130 58 168 150Z"/><path fill="#3a68bd" d="M6 150 35 79 64 150Z M71 150 100 80 129 150Z M131 150 160 78 189 150Z"/><path fill="#335ba3" d="M48 150 70 97 92 150Z M108 150 130 97 152 150Z"/></svg>
-    <span>Seven Ridge Consulting</span>
-  </a>
-  <nav aria-label="Main">
-    <a href="#results">Results</a>
-    <a href="#approach">Approach</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a class="contact-link" href="#contact">Contact</a>
-  </nav>
-</header>
+  <div class="band" id="top">
+    <div class="inner hero">
+      <div>
+        <h1>Plants back on plan, and built to stay there.</h1>
+        <p class="lead">Seven Ridge Consulting brings hands-on turnaround leadership to manufacturers owned by private equity. One experienced plant leader, on site, accountable for the numbers on the board.</p>
+        <div class="actions">
+          <a class="btn" href="#contact">Talk with Bob</a>
+          <a class="plain" href="#results">See the results</a>
+        </div>
+      </div>
+
+      <div class="board" role="group" aria-label="Track record by safety, quality, delivery, and cost">
+        <div class="board-head"><b>Track record board</b><span>Safety, quality, delivery, cost</span></div>
+        <div class="row"><div class="tile t-s" aria-hidden="true">S</div><div class="what"><b>OSHA recordable rate</b><span>400-person plant, behavior-based safety</span></div><div class="val num">&minus;60%</div></div>
+        <div class="row"><div class="tile t-q" aria-hidden="true">Q</div><div class="what"><b>Customer defects</b><span>Parts per million, over two years</span></div><div class="val num">400&rarr;50<small>PPM</small></div></div>
+        <div class="row"><div class="tile t-d" aria-hidden="true">D</div><div class="what"><b>Backorders</b><span>Turnaround client, within weeks</span></div><div class="val num">&minus;85%</div></div>
+        <div class="row"><div class="tile t-c" aria-hidden="true">C</div><div class="what"><b>EBITDA margin</b><span>$60M flagship plant, in four months</span></div><div class="val num">5&rarr;20%</div></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <main>
-  <div class="wrap hero">
-    <div>
-      <p class="kicker">Manufacturing turnarounds for PE-backed companies</p>
-      <h1>EBITDA from 5% <span class="arrow">to</span> 20% in four months.</h1>
-      <p class="lead">That was a $60M flagship plant with 300 unionized employees. Seven Ridge Consulting puts an experienced plant leader on site to find what's broken, install the operating rhythm to fix it, and hand a stronger team the keys.</p>
-      <div class="actions">
-        <a class="btn" href="#contact">Talk with Bob</a>
-        <a class="plain" href="#results">See the results</a>
-      </div>
-    </div>
-    <svg class="range" viewBox="0 54 196 97" aria-hidden="true">
-      <path fill="#5f85cc" d="M32 151 70 58 108 151Z"/>
-      <path fill="#5f85cc" d="M92 151 130 58 168 151Z"/>
-      <path fill="#3a68bd" d="M6 151 35 79 64 151Z"/>
-      <path fill="#3a68bd" d="M71 151 100 80 129 151Z"/>
-      <path fill="#3a68bd" d="M131 151 160 78 189 151Z"/>
-      <path fill="#335ba3" d="M48 151 70 97 92 151Z"/>
-      <path fill="#335ba3" d="M108 151 130 97 152 151Z"/>
-    </svg>
-  </div>
-  <div class="ground" aria-hidden="true"></div>
-
-  <div class="proof" aria-label="Track record">
-    <div class="wrap">
-      <div><strong>28 years</strong><span>in manufacturing, from the IT department to plant manager and VP</span></div>
-      <div><strong>$250M</strong><span>multi-site operation led: 3 plants, about 600 people</span></div>
-      <div><strong>60% fewer</strong><span>OSHA recordables after a behavior-based safety rollout</span></div>
-      <div><strong>400 to 50 PPM</strong><span>customer quality defects, cut by 8x in two years</span></div>
-    </div>
-  </div>
-
-  <section id="results" class="results">
-    <div class="wrap">
-      <div class="head">
-        <h2>Recent results</h2>
-        <p>Client names are kept confidential. Each of these was hands-on work inside the plant, measured in the client's own numbers.</p>
+  <section id="results" class="band">
+    <div class="inner">
+      <div class="sec-head">
+        <h2>Recent turnaround results</h2>
+        <p>Consulting clients stay confidential. Each chart shows the plant's own before and after numbers.</p>
       </div>
 
-      <article class="story">
-        <div class="figure">5% to 20%<small>EBITDA margin in four months</small></div>
-        <div>
-          <p class="client">Flagship plant of a PE-backed building products manufacturer: $60M revenue, 300 union employees, 1 million square feet</p>
+      <article class="result">
+        <div class="chart">
+          <div class="metric">EBITDA margin</div>
+          <div class="big num">5% to 20%</div>
+          <div class="bars">
+            <div class="b"><span class="lab">Before</span><span class="track"><span class="fill" style="width:20%;display:block"></span></span><span class="v num">5%</span></div>
+            <div class="b after"><span class="lab">4 months</span><span class="track"><span class="fill" style="width:80%;display:block"></span></span><span class="v num">20%</span></div>
+          </div>
+          <div class="scale">Scale 0 to 25%</div>
+        </div>
+        <div class="story">
+          <p class="who">Flagship plant of a PE-backed building products manufacturer: $60M, 300 union employees</p>
           <h3>Turning around the company's most important plant</h3>
-          <p>The company's largest facility was running at a 5% EBITDA margin, far below what the owners needed from it.</p>
+          <p>The largest facility in the company was running far below what its owners needed.</p>
           <ul>
             <li>Assessed the leadership team in the first weeks and made the hard calls: new leaders in safety, quality, supply chain, and operations over ten months.</li>
-            <li>Installed a review cadence that ran from the daily shift start-up all the way to CEO and board reporting, so everyone from supervisors to the board was working from the same numbers.</li>
+            <li>Installed a review cadence from the daily shift start-up to CEO and board reporting.</li>
             <li>Led the on-site team that took critical waste out of the key processes.</li>
-            <li>Recruited a new plant manager and coached that leader side by side for six months, then led a line-by-line contract review to prepare for the next union negotiation.</li>
+            <li>Recruited and coached a new plant manager for six months, and prepared the team line by line for the next union negotiation.</li>
           </ul>
         </div>
       </article>
 
-      <article class="story">
-        <div class="figure">85%<small>fewer backorders, within weeks</small></div>
-        <div>
-          <p class="client">Second plant, same manufacturer</p>
+      <article class="result">
+        <div class="chart">
+          <div class="metric">Open backorders</div>
+          <div class="big num">85% fewer</div>
+          <div class="bars">
+            <div class="b"><span class="lab">Before</span><span class="track"><span class="fill" style="width:100%;display:block"></span></span><span class="v num">100</span></div>
+            <div class="b after"><span class="lab">Weeks later</span><span class="track"><span class="fill" style="width:15%;display:block"></span></span><span class="v num">15</span></div>
+          </div>
+          <div class="scale">Indexed: starting backlog = 100</div>
+        </div>
+        <div class="story">
+          <p class="who">Second plant, same manufacturer</p>
           <h3>Getting customers their orders again</h3>
-          <p>A sister facility had a deep backlog of late customer orders and a real risk of quality escapes reaching customers.</p>
+          <p>A sister facility had a deep backlog of late orders and a real risk of quality escapes reaching customers.</p>
           <ul>
-            <li>Put triage rules, visual controls, and daily production accountability in place within weeks of arriving.</li>
-            <li>Brought in targeted process improvement help and a new inspection and control structure, improving quality 15%.</li>
-            <li>Selected and onboarded a new plant manager and handed off a working operating system so the gains would hold.</li>
+            <li>Put triage rules, visual controls, and daily production accountability in place within weeks.</li>
+            <li>Added a new inspection and control structure, improving quality 15%.</li>
+            <li>Selected and onboarded a new plant manager and handed off a working operating system.</li>
           </ul>
         </div>
       </article>
 
-      <article class="story">
-        <div class="figure">200 leaders<small>on one operating system across a $250M, three-plant business</small></div>
-        <div>
-          <p class="client">Multi-site store fixtures manufacturer, in Bob's leadership roles before founding Seven Ridge</p>
-          <h3>Building an operating system that scales</h3>
+      <article class="result">
+        <div class="chart">
+          <div class="metric">Plant productivity</div>
+          <div class="big num">+15% in a year</div>
+          <div class="bars">
+            <div class="b"><span class="lab">Before</span><span class="track"><span class="fill" style="width:83.3%;display:block"></span></span><span class="v num">100</span></div>
+            <div class="b after"><span class="lab">1 year</span><span class="track"><span class="fill" style="width:95.8%;display:block"></span></span><span class="v num">115</span></div>
+          </div>
+          <div class="scale">Indexed: starting output = 100, scale 0 to 120</div>
+        </div>
+        <div class="story">
+          <p class="who">Multi-site store fixtures manufacturer: three plants, about 600 people, $250M</p>
+          <h3>An operating system that scales across a company</h3>
           <p>As plant manager, then director of operations, then director of organizational development, Bob built the management system one level at a time.</p>
           <ul>
             <li>Raised productivity 15% in one year at a 300-person, $180M plant with an integrated lean management system.</li>
-            <li>Designed a business operating system for planning, execution, measurement, and learning, and rolled out a values-based leadership model to 200 leaders in every facility.</li>
+            <li>Rolled out a business operating system and values-based leadership model to 200 leaders in every facility.</li>
             <li>Co-led a difficult union contract negotiation to an outcome that worked for both sides.</li>
           </ul>
         </div>
@@ -254,91 +278,95 @@
     </div>
   </section>
 
-  <section id="approach">
-    <div class="wrap">
-      <div class="head">
+  <section id="approach" class="flowsec band">
+    <div class="inner">
+      <div class="sec-head">
         <h2>How an engagement runs</h2>
-        <p>The goal is a plant that keeps performing after Seven Ridge leaves. Every engagement is built to end with a stronger team, not a dependency.</p>
+        <p>Every engagement ends with a stronger team running the plant, not a dependency on a consultant.</p>
       </div>
-      <ol class="steps">
+      <ol class="flow">
         <li><h3>Assess fast</h3><p>Walk the floor, read the numbers, and evaluate the leadership team in the first weeks.</p></li>
-        <li><h3>Install the rhythm</h3><p>Daily start-ups, visual controls, and KPI reviews that connect the shop floor to the boardroom.</p></li>
-        <li><h3>Fix and restructure</h3><p>Remove the waste, make the people decisions, and stabilize safety, quality, and delivery.</p></li>
-        <li><h3>Hand off</h3><p>Select and coach the leader who owns the results next, and leave the operating system with them.</p></li>
+        <li><h3>Install the rhythm</h3><p>Daily start-ups, visual controls, and KPI reviews from the floor to the board.</p></li>
+        <li><h3>Fix and restructure</h3><p>Remove the waste, make the people decisions, stabilize safety, quality, and delivery.</p></li>
+        <li><h3>Hand off</h3><p>Select and coach the next leader, and leave the operating system with them.</p></li>
       </ol>
     </div>
   </section>
 
-  <section id="services">
-    <div class="wrap">
-      <div class="head">
+  <section id="services" class="band">
+    <div class="inner">
+      <div class="sec-head">
         <h2>Services</h2>
-        <p>Engagements are shaped around the problem in front of you, from a diligence sprint before close to months on site after it.</p>
+        <p>Shaped around the problem in front of you, from a diligence sprint before close to months on site after it.</p>
       </div>
-      <div class="services">
-        <div class="service"><h3>Plant turnarounds</h3><p>Rapid recovery of margin, delivery, and quality at underperforming facilities, including union environments and leadership restructuring.</p></div>
-        <div class="service"><h3>Operating systems and lean management</h3><p>Tiered daily management, visual controls, KPI cadence, and strategic planning that fit the size and pace of the business.</p></div>
-        <div class="service"><h3>Leadership and labor transitions</h3><p>Leadership assessment, plant manager selection and coaching, safety culture, and union contract preparation.</p></div>
-        <div class="service"><h3>ERP and data</h3><p>Rare combination of IT and plant leadership: ERP implementations that reflect how the shop really runs, plus KPI analytics leaders use.</p></div>
-        <div class="service"><h3>Acquisition evaluation</h3><p>An operator's read before you buy: operational due diligence, recast financial review, and a clear view of risk and upside.</p></div>
+      <div class="svc">
+        <div class="svc-row"><h3>Plant turnarounds</h3><p>Rapid recovery of margin, delivery, and quality at underperforming plants, including union environments and leadership restructuring.</p></div>
+        <div class="svc-row"><h3>Operating systems</h3><p>Tiered daily management, visual controls, KPI cadence, and strategic planning sized to the business.</p></div>
+        <div class="svc-row"><h3>Leadership and labor</h3><p>Leadership assessment, plant manager selection and coaching, safety culture, and union contract preparation.</p></div>
+        <div class="svc-row"><h3>ERP and data</h3><p>ERP work that reflects how the shop really runs, plus KPI analytics leaders actually use.</p></div>
+        <div class="svc-row"><h3>Acquisition evaluation</h3><p>An operator's read before you buy: operational due diligence, recast financials, and a clear view of risk and upside.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="about-sec">
-    <div class="wrap about">
+  <section id="about" class="band" style="padding-top:0">
+    <div class="inner about">
       <div class="bio">
         <h2>Bob Mills</h2>
-        <p>Bob has spent 28 years in manufacturing. He started in IT leading Oracle ERP migrations, moved onto the shop floor, and went on to run plants from 100 to 400 people and a three-plant, $250M operation.</p>
-        <p>He founded Seven Ridge Consulting in 2024 to do for private equity owners what he did as an operator: stabilize plants that have lost their footing and build the leadership systems that keep them performing.</p>
-        <p>He has also led a full plant closure, start to finish, covering finance, operations, logistics, and people. That experience helps when a portfolio needs to be reshaped, not just improved.</p>
-        <p class="edu">MBA, Creighton University<br>B.S., Computer Management Systems, Northwest Missouri State University</p>
+        <p>Bob has spent 28 years in manufacturing, the first part of it in IT leading large ERP migrations and the rest running plants. That mix means he can read a plant's numbers and its systems as well as its shop floor.</p>
+        <p>Before founding Seven Ridge Consulting in 2024, he led operations from the plant level to the multi-site executive level, at companies ranging from a Fortune 500 global manufacturer to privately held, mid-market businesses.</p>
+        <p>He has turned around struggling plants, built operating systems used by hundreds of leaders, negotiated union contracts, and led a full plant closure. Seven Ridge brings that same hands-on leadership to private equity owners.</p>
+        <p>He holds an MBA and an undergraduate degree in computer systems.</p>
       </div>
-      <ol class="timeline" aria-label="Career history, most recent first">
-        <li><span class="yrs">2024 to present</span><span class="org">Seven Ridge Consulting</span><span class="roles">Owner and principal consultant</span><span class="note">Turnarounds at two plants of a PE-backed manufacturer</span></li>
-        <li><span class="yrs">2019 to 2024</span><span class="org">Lozier Corporation</span><span class="roles">Plant manager, director of operations, director of organizational development</span><span class="note">3 plants, about 600 people, $250M</span></li>
-        <li><span class="yrs">2017 to 2019</span><span class="org">Columbus Hydraulics</span><span class="roles">Vice president of manufacturing</span><span class="note">Doubled constraint capacity, output up 18%</span></li>
-        <li><span class="yrs">2015 to 2017</span><span class="org">Lindsay Corporation</span><span class="roles">Plant manager</span><span class="note">400 people, $200M; OSHA recordable rate down 60%</span></li>
-        <li><span class="yrs">2014 to 2015</span><span class="org">JELD-WEN</span><span class="roles">Continuous improvement manager</span><span class="note">Lean deployment across 10 U.S. plants</span></li>
-        <li><span class="yrs">1998 to 2014</span><span class="org">Eaton Corporation</span><span class="roles">IT and operations roles, operations excellence manager, plant manager</span><span class="note">Quality PPM 400 to 50; on-time delivery 95% to 99%</span></li>
-      </ol>
+      <div class="glance">
+        <h3>Background at a glance</h3>
+        <dl>
+          <div class="item"><dt>Scale</dt><dd>
+            <div class="scale-row">
+              <div><b class="num">100&ndash;700</b><span>people per plant</span></div>
+              <div><b class="num">$30M&ndash;$400M</b><span>plant revenue</span></div>
+              <div><b class="num">3 plants</b><span>$250M multi-site lead</span></div>
+            </div>
+          </dd></div>
+          <div class="item"><dt>Industries</dt><dd>Electrical and power management, irrigation and agricultural equipment, hydraulics, store fixtures, and doors, windows, and building products</dd></div>
+          <div class="item"><dt>Companies</dt><dd>Fortune 500 global manufacturer, publicly traded equipment maker, privately held mid-market manufacturers, and PE-backed portfolio companies</dd></div>
+          <div class="item"><dt>Roles</dt><dd>IT and ERP leader, operational excellence manager, plant manager, VP of manufacturing, director of operations, and director of organizational development</dd></div>
+          <div class="item"><dt>Settings</dt><dd>Union and non-union plants, single sites and multi-site networks, and corporate continuous improvement across 10 U.S. plants</dd></div>
+        </dl>
+      </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <div class="wrap">
+  <section id="contact" class="contact band">
+    <div class="inner">
       <h2>Have a plant that isn't hitting plan?</h2>
-      <p>Whether you're weighing an acquisition or need results from one you already own, start with a short conversation about what you're seeing.</p>
+      <p class="sub">Whether you're weighing an acquisition or need results from one you already own, start with a short conversation about what you're seeing.</p>
       <div class="reach">
-        <a class="email" href="mailto:info@sevenridgeconsulting.com?subject=Inquiry%20from%20sevenridgeconsulting.com">info@sevenridgeconsulting.com</a>
-        <button type="button" class="btn copy" id="copy-email" data-email="info@sevenridgeconsulting.com">Copy email</button>
-        <span class="copied" id="copy-status" role="status" aria-live="polite"></span>
+        <a class="email" href="mailto:info@sevenridgeconsulting.com?subject=Inquiry%20from%20sevenridgeconsulting.com"><span id="email-b">info@sevenridgeconsulting.com</span></a>
+        <button type="button" class="btn" id="copy-b">Copy email</button>
+        <span class="status" id="status-b" role="status" aria-live="polite"></span>
       </div>
       <p class="alt">Or connect on <a href="https://www.linkedin.com/in/bob-mills-1902944/">LinkedIn</a>.</p>
-      <svg class="range" viewBox="0 54 196 97" aria-hidden="true">
-        <path fill="#5f85cc" d="M32 151 70 58 108 151Z M92 151 130 58 168 151Z"/>
-        <path fill="#3a68bd" d="M6 151 35 79 64 151Z M71 151 100 80 129 151Z M131 151 160 78 189 151Z"/>
-        <path fill="#335ba3" d="M48 151 70 97 92 151Z M108 151 130 97 152 151Z"/>
-      </svg>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">
+<footer class="band">
+  <div class="inner">
     <span>&copy; 2024 Seven Ridge Consulting</span>
     <span>Omaha, Nebraska</span>
   </div>
 </footer>
+
 <script>
 (function(){
-  var b=document.getElementById('copy-email'), s=document.getElementById('copy-status');
-  if(!b) return;
+  var b=document.getElementById('copy-b'), s=document.getElementById('status-b'), el=document.getElementById('email-b');
+  function selectIt(){ var r=document.createRange(); r.selectNodeContents(el); var sel=window.getSelection(); sel.removeAllRanges(); sel.addRange(r); s.textContent='Address selected. Press Ctrl+C to copy.'; }
   b.addEventListener('click', function(){
-    var e=b.getAttribute('data-email');
-    function done(){ b.textContent='Copied'; s.textContent='Email address copied to your clipboard.'; setTimeout(function(){ b.textContent='Copy email'; s.textContent=''; }, 2500); }
-    function fallback(){ var t=document.createElement('textarea'); t.value=e; t.setAttribute('readonly',''); t.style.position='absolute'; t.style.left='-9999px'; document.body.appendChild(t); t.select(); try{ document.execCommand('copy'); done(); }catch(x){ s.textContent='Copy this address: '+e; } document.body.removeChild(t); }
-    if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(e).then(done, fallback); } else { fallback(); }
+    var addr=el.textContent.trim();
+    try{
+      navigator.clipboard.writeText(addr).then(function(){ b.textContent='Copied'; s.textContent='Email address copied.'; setTimeout(function(){ b.textContent='Copy email'; s.textContent=''; },2500); }, selectIt);
+    }catch(e){ selectIt(); }
   });
 })();
 </script>
